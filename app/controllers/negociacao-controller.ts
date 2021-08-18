@@ -16,6 +16,7 @@ export class NegociacaoController {
 
     adiciona(): void {
         const negociacao = this.criaNegociacao();
+        negociacao.data.setDate(12);
         this.negociacoes.adiciona(negociacao);
         this.negociacoes.lista();
         console.log(this.negociacoes.lista());
@@ -35,8 +36,5 @@ export class NegociacaoController {
         this.inputQuantidade.value = '1';
         this.inputValor.value = '0.0';
         this.inputData.focus();
-
     }
-
-
 }
